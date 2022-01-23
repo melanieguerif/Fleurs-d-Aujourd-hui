@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Yeseva One', cursive; */
+
+/*Réglarge dgénérale de la page*/
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #edede8;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 40px;
+    /* padding-bottom: 200px; */
+    position: relative;
+}
+/*Stylisation du menu*/
+/*Menu Général*/
+nav{
+    background-color: #c3baac;
+    display: flex;
+    color: white;
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 9999;
+}
+.menu{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;  
+    align-items: center;  
+    font-family: 'Yeseva One', cursive;
+}
+/*Logo*/
+.iconFlower{
+    background-color: #a99d89;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.logo{
+    width: 20em;
+    height: 20em;
+    font-size: 0.1em;
+    margin: 0.2em;
+}
+/*lien du menu*/
+.menuItem{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+/*Stylisation de la banière*/
+.Banner{
+    background-image:url(../img/banniere_regulard.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.Banner h1{
+    font-family: 'Yeseva One', cursive;
+    color: #edede8;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.lineBetweenHeader{
+    width: 35%;
+    height: 1px;
+    border-top: #edede8 solid 1.5px;
+}
+.textePrezMarque{
+    font-weight: 400;
+    color: #edede8;
+    font-size: 0.9em;
+    text-align: center;
+}
+/*stylisation des articles*/
+/*conteneur général*/
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+}
+.laptop{
+    display: none;
+}
+.decoration, .event, .loveAtFirst{
+    padding: 30px 30px 30px 30px ; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* taille des image*/
+.decoration div img, .event div img, .loveAtFirst div img{
+    width: 250px;
+    height: auto;
+}
+/*texte en dessous des images*/
+.lineBetween{
+    width: 130px;
+    height: 1px;
+    border-top: #308878 solid 1.5px;
+    margin: 10px 0 10px 0;
+}
+.textPrez{
+    text-align: center;
+    color: #308878;
+    font-size: 0.8em;
+}
+.textPrez h2 a{
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 10px;
+    text-decoration: none;
+    outline: none;
+    text-decoration: none;
+    color: #308878;
+}
+.textPrez h2{
+    margin-bottom: 10px;
+}
+.textPrez h2 a:hover {
+ font-size: 1.2em;    
+}
+/* stylistaion du footer*/
+footer{
+    background-color: #c3baac;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    height: 80px;
+}
+.author{
+    font-family: 'Yeseva One', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.author div{
+    border-top: white solid 1.5px;
+    width: 70%;
+}
+.legalNotices{
+    align-self: flex-end;
+    font-size: 0.6em;
+    text-align: center;
+}
+.socialNetworks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialNetworksButton{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.socialNetworksItems{
+    color: white;
+    font-size: 1.5em;
+}
+/* RESPONSIVE*/
+@media screen and (min-width: 1024px){
+    /*Menu*/
+    .menu{
+        width: 70%;
+    }
+    .menuItem{
+        font-weight: 400;
+    }
+    .menuItemContainer{
+        height: 100%; 
+        display: flex;
+        align-items: center;
+        padding : 0 10px 0 10px;
+    }
+    .menuItemContainer:hover{
+        background-color: #a99d89;
+    }
+    /*Bennière*/
+    .Mobile, .lineBetweenHeader{
+        display: none;
+    }
+    .Banner{
+        align-items: flex-start;
+        justify-content: end;
+        padding: 40px;
+    }
+    .Banner h1{
+        font-size: 2em;
+    }
+    .laptop{
+        display: unset;
+        margin-top: 15px;
+        color: #073634;
+        padding: 0 50px 0 50px ;
+        display: flex;
+    }
+    aside .laptop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .decoration, .event, .loveAtFirst{
+        width: 300px;
+    }
+    /*Article*/
+    .legalNotices{
+        align-self: initial;
+        order: -1;
+        text-align: left;
+    }
+    footer{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        align-items: flex-end;
+        height: 80px;
+        padding: 20px;
+    }
+}
